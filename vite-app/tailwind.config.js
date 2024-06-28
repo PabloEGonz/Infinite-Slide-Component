@@ -4,7 +4,17 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ], theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'slide': 'slide 30s linear infinite',
+      },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0)'},
+          '100%': { transform: 'translateX(calc(-445px * 9))'}
+        }
+      }
+    },
   },
   plugins: [],
 }
